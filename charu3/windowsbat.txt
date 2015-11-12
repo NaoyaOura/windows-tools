@@ -1,0 +1,26 @@
+_|CHARUTXT-FLD|Windowsバッチコマンド|_
+	_|CHARUTXT-DAT|コメント|_
+@REM コメント
+	_|CHARUTXT-DED|_
+
+	_|CHARUTXT-DAT|batファイルが存在するディレクトリPATH|_
+%~dp0
+	_|CHARUTXT-DED|_
+
+	_|CHARUTXT-DAT|ファイル存在チェック|_
+IF NOT EXIST ファイル名 goto endPoint
+echo execScript
+:endPoint
+	_|CHARUTXT-DED|_
+
+	_|CHARUTXT-DAT|管理者権限での実行か分岐|_
+openfiles > NUL 2>&1 
+if NOT %ERRORLEVEL% EQU 0 goto NotAdmin 
+echo 管理者権限で実行中
+goto End
+ 
+:NotAdmin 
+echo 一般権限で実行中
+:End
+	_|CHARUTXT-DED|_
+

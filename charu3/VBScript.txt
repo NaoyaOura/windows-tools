@@ -1,0 +1,21 @@
+_|CHARUTXT-FLD|VBSコマンド|_
+	_|CHARUTXT-DAT|コメント|_
+' コメント
+	_|CHARUTXT-DED|_
+
+	_|CHARUTXT-DAT|InputBoxを利用|_
+InputValue = InputBox("検索ワードを入力してください")
+	_|CHARUTXT-DED|_
+
+	_|CHARUTXT-DAT|Applicationを実行する|_
+Set objWShell = CreateObject("WScript.Shell")
+
+//プログラム名, ウィンドウ状態, 待機有無
+objWShell.Run "%windir%\system32\calc.exe", vbHide, False
+	_|CHARUTXT-DED|_
+
+	_|CHARUTXT-DAT|アプリケーションを終了する|_
+WScript.Quit
+	_|CHARUTXT-DED|_
+
+
