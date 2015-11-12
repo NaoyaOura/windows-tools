@@ -20,3 +20,10 @@ script/setup.batを実行すると配置される
     * defaultSetting.configを修正、不要なものを削除
     * package-install.batを実行
 
+### chocolateyで補えなかったインストール
+    * charu3(clipボードの内容を記憶するアプリ、軽量で非常に使いやすい)
+        * [本家のサイト](http://keijiweb.com/software.html)
+        * テキスト拡張の内容は、整理中...
+    * craftlaunch（とても軽量で機能性も十分）
+        * [本家のサイト](https://sites.google.com/site/craftware/clnch)
+        * [拡張](https://github.com/nitoyon/clnch3_extensions)
