@@ -28,3 +28,8 @@ script/setup.batを実行すると配置される
 * craftlaunch（とても軽量で機能性も十分）
     * [本家のサイト](https://sites.google.com/site/craftware/clnch)
     * [拡張](https://github.com/nitoyon/clnch3_extensions)
+
+## sublimeのキーバインド設定（Eclipse化）
+
+* eclipseのキーバインドが利用できるように変更したSublimeのキーバインド
+    * [sublime_keybind](sublime_keybind/Default (Windows).sublime-keymap)

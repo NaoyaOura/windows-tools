@@ -1,0 +1,49 @@
+[
+	// ctrl+tabでの移動は左右で移動するように設定
+	{ "keys": ["ctrl+tab"], "command": "next_view" }
+	,{ "keys": ["ctrl+shift+tab"], "command": "prev_view" }
+
+	//  -------------------------------------------------------------------- eclipse化対応
+	// alt+左で戻る
+	,{ "keys": ["alt+left"], "command": "jump_back" }
+	// alt+右で戻ったのをまた進める
+	,{ "keys": ["alt+right"], "command": "jump_forward" }
+	// 行削除
+	,{ "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "Packages/Default/Delete Line.sublime-macro"} }
+	// 行番号選択
+	,{ "keys": ["ctrl+l"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"} }
+	// 名前の変更
+	,{ "keys": ["shift+alt+r"], "command": "find_all_under" }
+	// 選択中単語の次を検索
+	,{ "keys": ["ctrl+k"], "command": "find_under" }
+	,{ "keys": ["ctrl+shift+k"], "command": "find_under_prev" }
+	// 行の入れ替え
+	,{ "keys": ["alt+up"], "command": "swap_line_up" }
+	,{ "keys": ["alt+down"], "command": "swap_line_down" }
+	// 下行と文字を連結させる
+	,{ "keys": ["ctrl+alt+j"], "command": "join_lines" }
+	// 行複製
+	,{ "keys": ["ctrl+alt+down"], "command": "duplicate_line" }
+	,{ "keys": ["ctrl+alt+up"], "command": "duplicate_line" }
+	// リソース検索
+	,{ "keys": ["shift+ctrl+r"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} }
+	// 大文字 <-> 小文字変換
+	,{ "keys": ["shift+ctrl+y"], "command": "lower_case" }
+	,{ "keys": ["shift+ctrl+x"], "command": "upper_case" }
+	// インデント揃え
+	,{ "keys": ["ctrl+shift+f"], "command": "reindent" , "args": {"single_line": false}}
+	// F3で関数の宣言元にジャンプ
+	,{ "keys": ["f3"], "command": "goto_definition" }
+	// リフレッシュ(sublimeは基本オートリロード)
+	,{"keys": ["f5"], "command": "revert"}
+	// 実行（ビルド）
+	,{ "keys": ["ctrl+f11"], "command": "build" }
+	//  -------------------------------------------------------------------- eclipse化対応で消えてしまったデフォルトで利用頻度の高い機能
+	// 矩形選択(元はctrl+alt+up,ctrl+alt+down)
+	,{ "keys": ["ctrl+up"], "command": "select_lines", "args": {"forward": false} }
+	,{ "keys": ["ctrl+down"], "command": "select_lines", "args": {"forward": true} }
+	// stackしながら対象を選択する（元はctrl+d)
+	,{ "keys": ["shift+alt+d"], "command": "find_under_expand" }
+	//  ----------------------------------------------------------------------packageで補ったところ
+	//https://github.com/khrizt/GotoLastEditのインストールでctrl+qの機能が追加
+]
