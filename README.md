@@ -10,3 +10,13 @@ script/setup.batを実行すると配置される
 * 「送る」メニューに追加（script/vbs/SendTo.vbs）
 * PC起動時に実行する(script/vbs/SendStartUp.vbs)
 
+## 初期インストール作業
+
+### chocolateyによるセットアップ
+
+0. chocolatey のインストールがまだのとき
+    * chocolatey-install.batを実行
+0. chocolateyのライブラリを一括でダウンロード
+    * defaultSetting.configを修正、不要なものを削除
+    * package-install.batを実行
+
