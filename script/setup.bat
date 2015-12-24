@@ -15,6 +15,9 @@ copy %~dp0\vbs\SendStartUp.vbs "%UserProfile%\AppData\Roaming\Microsoft\Windows\
 echo "「送る」メニューに「2.shortcutに追加」を登録"
 copy %~dp0\vbs\SendAddShortcut.vbs "%UserProfile%\AppData\Roaming\Microsoft\Windows\SendTo\2.shortcutに追加.vbs"
 
+echo "「送る」メニューに「3.新しいタブでExcelを開く」を登録"
+copy %~dp0\vbs\NewTabExcelOpen.vbs "%UserProfile%\AppData\Roaming\Microsoft\Windows\SendTo\3.新しいタブでExcelを開く.vbs"
+
 
 @REM "shortcutフォルダの設定"
 SET SHORTCUT_FOLDER="C:\shortcut"
