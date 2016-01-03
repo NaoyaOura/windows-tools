@@ -41,6 +41,8 @@ echo "shortcutƒtƒHƒ‹ƒ_‚ð“o˜^"
 call %~dp0\vbs\SendTo.vbs /F:%SHORTCUT_FOLDER% /D:%SHORTCUT_FOLDER%
 echo "SendToƒtƒHƒ‹ƒ_‚ð“o˜^"
 call %~dp0\vbs\SendTo.vbs /F:"%UserProfile%\AppData\Roaming\Microsoft\Windows\SendTo" /D:%SHORTCUT_FOLDER%
+echo "StartUpƒtƒHƒ‹ƒ_‚ð“o˜^"
+call %~dp0\vbs\SendTo.vbs /F:"%UserProfile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup" /D:%SHORTCUT_FOLDER%
 
 
 echo **************************************************
