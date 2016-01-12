@@ -2,13 +2,13 @@
   New-Item -Path $Path -type directory -Force
 }
 
-$packageName = 'osqledit'
-$url = 'http://www.hi-ho.ne.jp/a_ogawa/osqledit/osqledit_9632.zip'
+$packageName = 'charu3'
+$url = 'http://ftp.vector.co.jp/27/65/2147/c3030301.zip'
 
 $install_path = $env:choco_install_path
 if($install_path -eq $null){
   # デフォルトのインストールフォルダ
-  $install_path = join-path $env:systemdrive '_lib'
+  $install_path = join-path $env:systemdrive 'Software'
   [Environment]::SetEnvironmentVariable('CHOCO_INSTALL_PATH', $install_path, "User")
 }
 
@@ -30,10 +30,15 @@ $packageArgs = @{
 
 Install-ChocolateyZipPackage @packageArgs
 
-# 64Bitのときの警告
-if (Get-ProcessorBits 64) {
-  Write-Warning "64bit環境で利用する場合、32bit版のOracle Clientが必要です"
-}
+# warning ログを出力
+$startUpPath = "$env:appdata\Microsoft\Windows\Start Menu\Programs\Startup\$packageName.lnk"
+Write-Warning "[$startUpPath]スタートアップ（PC起動時に実行する設定）に追加します."
+
+#スタートアップメニューに追加
+$WshShell = New-Object -comObject WScript.Shell
+$Shortcut = $WshShell.CreateShortcut($startUpPath)
+$Shortcut.TargetPath = "$install_path\$packageName.exe"
+$Shortcut.Save()
 
 # フォルダを開く
 Invoke-Item $install_path

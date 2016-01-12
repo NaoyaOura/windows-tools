@@ -9,7 +9,7 @@ $url64      = 'http://ftp.vector.co.jp/65/85/2526/a5m2_2.11.2_x64.zip' # 64bit U
 $install_path = $env:choco_install_path
 if($install_path -eq $null){
   # デフォルトのインストールフォルダ
-  $install_path = join-path $env:systemdrive '_lib'
+  $install_path = join-path $env:systemdrive 'Software'
   [Environment]::SetEnvironmentVariable('CHOCO_INSTALL_PATH', $install_path, "User")
 }
 
